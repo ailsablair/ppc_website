@@ -38,7 +38,9 @@ jobs:
       - name: Build and Publish Storybook to GitHub Pages
         id: build-publish
         uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+        env:
+          REPO_NAME: ${{ github.event.repository.name }}
         with:
           # This should match the output directory set by your Storybook build command (default is storybook-static)
-          path: storybook-static 
+          path: storybook-static
           build_command: npm run build-storybook
