@@ -1,0 +1,44 @@
+# .github/workflows/deploy-storybook.yml
+
+name: Deploy Storybook
+
+on:
+  push:
+    # Trigger deployment on push to the primary branch (e.g., 'main' or 'master')
+    branches: ["main"] 
+  # Allows manual triggering from the GitHub Actions tab
+  workflow_dispatch: 
+
+# Configure permissions for deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.build-publish.outputs.page_url }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # required by some actions
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and Publish Storybook to GitHub Pages
+        id: build-publish
+        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+        with:
+          # This should match the output directory set by your Storybook build command (default is storybook-static)
+          path: storybook-static 
+          build_command: npm run build-storybook
