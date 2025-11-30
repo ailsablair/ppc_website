@@ -11,6 +11,12 @@ const config: StorybookConfig = {
     "@storybook/addon-a11y",
     "@storybook/addon-docs"
   ],
-  "framework": "@storybook/react-vite"
+  "framework": "@storybook/react-vite",
+  "viteFinal": async (config) => {
+    return {
+      ...config,
+      base: process.env.NODE_ENV === 'production' ? `/${process.env.REPO_NAME || 'ppc_website'}/` : '/'
+    };
+  }
 };
 export default config;
