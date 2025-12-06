@@ -9,7 +9,16 @@ const config: StorybookConfig = {
     "@chromatic-com/storybook",
     "@storybook/addon-vitest",
     "@storybook/addon-a11y",
-    "@storybook/addon-docs"
+    "@storybook/addon-docs",
+    "@storybook/addon-console",
+    "@storybook/test-runner",
+    "@storybook/addon-themes",
+    "@storybook/addon-docs",
+    "@storybook-addon-code-editor",
+    "@storybook-vscode-component",
+    "@storybook-addon-playground",
+    "@storybook-addon-material-ui",
+    "@storybook/addon-styling",
   ],
   "framework": "@storybook/react-vite",
   "viteFinal": async (config) => {
