@@ -3,7 +3,7 @@ import './colors.css';
 import './design-tokens.css';
 
 const meta = {
-  title: 'Foundation',
+  title: 'Foundations',
   parameters: {
     layout: 'fullscreen',
   },
