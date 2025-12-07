@@ -1,0 +1,265 @@
+/* PipsQueak Pet Care - Complete Design Token System */
+
+:root {
+  /* ==================== COLOR TOKENS ==================== */
+  
+  /* Primary Colors - Pink */
+  --ppc-pink-primary: #e34a6f;
+  --ppc-pink-primary-300: #ed778a;
+  --ppc-pink-primary-200: #f7a5a5;
+  --ppc-pink-primary-100: #fbd2d2;
+  --ppc-pink-primary-50: #fef4f4;
+
+  /* Primary Colors - Blue Steel */
+  --ppc-blue-steel: #383e53;
+  --ppc-blue-steel-300: #5d688a;
+  --ppc-blue-steel-200: #aeb3c5;
+  --ppc-blue-steel-100: #d6d9e2;
+  --ppc-blue-steel-50: #f4f5f7;
+
+  /* Primary Colors - Orange */
+  --ppc-burnt-orange: #e95c00;
+  --ppc-burnt-orange-300: #fe8d53;
+  --ppc-burnt-orange-200: #ffb997;
+  --ppc-burnt-orange-100: #ffd6c1;
+  --ppc-burnt-orange-50: #fff5ed;
+
+  /* Primary Colors - Olive */
+  --ppc-olive: #657b52;
+  --ppc-olive-300: #8ba178;
+  --ppc-olive-200: #c1d7ae;
+  --ppc-olive-100: #e2f0e8;
+  --ppc-olive-50: #fafcfb;
+
+  /* Primary Colors - Yellow/Mustard */
+  --ppc-mustard: #fec10b;
+  --ppc-mustard-300: #fed766;
+  --ppc-mustard-200: #fee7a3;
+  --ppc-mustard-100: #fff7e0;
+  --ppc-mustard-50: #fffdf7;
+
+  /* Neutral Colors */
+  --ppc-pure-white: #ffffff;
+  --ppc-black: #3c3c3c;
+
+  /* Grey Scale */
+  --ppc-dark-grey: #515151;
+  --ppc-dark-grey-300: #808080;
+  --ppc-dark-grey-200: #aeaeae;
+  --ppc-dark-grey-100: #c5c5c5;
+  --ppc-dark-grey-50: #f3f3f3;
+
+  --ppc-light-grey: #d0d0d0;
+  --ppc-light-grey-300: #d9d9d9;
+  --ppc-light-grey-200: #e3e3e3;
+  --ppc-light-grey-100: #ececec;
+  --ppc-light-grey-50: #f6f6f6;
+
+  /* Neutral Accents */
+  --ppc-soft-brown: #e3cdbf;
+  --ppc-soft-brown-300: #ead8cd;
+  --ppc-soft-brown-200: #f0e3db;
+  --ppc-soft-brown-100: #f6eeea;
+  --ppc-soft-brown-50: #fcf9f8;
+
+  --ppc-blush: #e5aea9;
+  --ppc-blush-300: #edc6c3;
+  --ppc-blush-200: #f2d7d4;
+  --ppc-blush-100: #faefee;
+  --ppc-blush-50: #fcf7f6;
+
+  /* Status Colors */
+  --ppc-success: #479900;
+  --ppc-error: #ea4335;
+  --ppc-warning: #fbbc05;
+  --ppc-info: #407afb;
+  --ppc-note: #6d28d9;
+  --ppc-disabled: #cdcdcd;
+
+  /* ==================== TYPOGRAPHY TOKENS ==================== */
+  
+  /* Font Families */
+  --font-author: "Author", serif;
+  --font-clash-grotesk: "Clash Grotesk", sans-serif;
+  --font-pirage: "Pirage", sans-serif;
+  --font-gabarito: "Gabarito", sans-serif;
+  --font-caveat-brush: "Caveat Brush", cursive;
+
+  /* Headings - H1 */
+  --h1-font-size: 72px;
+  --h1-font-weight-bold: 600;
+  --h1-font-weight-regular: 400;
+  --h1-font-weight-light: 300;
+  --h1-letter-spacing: 0.25%;
+  --h1-line-height: 95%;
+
+  /* Headings - H2 */
+  --h2-font-size: 64px;
+  --h2-font-weight-bold: 600;
+  --h2-font-weight-regular: 400;
+  --h2-font-weight-light: 300;
+  --h2-letter-spacing: 0.25%;
+  --h2-line-height: 110%;
+
+  /* Headings - H3 */
+  --h3-font-size: 48px;
+  --h3-font-weight-bold: 600;
+  --h3-font-weight-regular: 400;
+  --h3-font-weight-light: 300;
+  --h3-letter-spacing: 0.15%;
+  --h3-line-height: 54px;
+
+  /* Subtitle */
+  --subtitle-font-size: 40px;
+  --subtitle-font-weight-bold: 600;
+  --subtitle-font-weight-regular: 400;
+  --subtitle-font-weight-light: 300;
+  --subtitle-letter-spacing: 0.25%;
+  --subtitle-line-height: 105%;
+
+  /* Eyebrow */
+  --eyebrow-font-size: 20px;
+  --eyebrow-font-weight: 600;
+  --eyebrow-letter-spacing: 2%;
+  --eyebrow-line-height: 105%;
+  --eyebrow-text-transform: uppercase;
+
+  /* Body - Large */
+  --body-lg-font-size: 24px;
+  --body-lg-font-weight-regular: 400;
+  --body-lg-font-weight-medium: 500;
+  --body-lg-font-weight-semibold: 600;
+  --body-lg-letter-spacing: 0.75%;
+  --body-lg-line-height: 125%;
+
+  /* Body - Regular */
+  --body-font-size: 19px;
+  --body-font-weight-regular: 400;
+  --body-font-weight-medium: 500;
+  --body-font-weight-semibold: 600;
+  --body-letter-spacing: 0.75%;
+  --body-line-height: 120%;
+
+  /* Body - Small */
+  --body-sm-font-size: 16px;
+  --body-sm-font-weight-regular: 400;
+  --body-sm-font-weight-medium: 500;
+  --body-sm-font-weight-semibold: 600;
+  --body-sm-letter-spacing: 2.75%;
+  --body-sm-line-height: 120%;
+
+  /* Label */
+  --label-font-size: 32px;
+  --label-font-weight: 400;
+  --label-letter-spacing: 2%;
+  --label-line-height: 105%;
+
+  /* Footnote */
+  --footnote-font-size: 14px;
+  --footnote-font-weight: 500;
+  --footnote-letter-spacing: 2.25%;
+  --footnote-line-height: 28px;
+
+  /* Links */
+  --link-font-weight: 500;
+  --link-text-decoration: underline;
+
+  /* ==================== SHADOW/EFFECT TOKENS ==================== */
+  
+  /* Hover Shadows */
+  --shadow-olive-hover: 0 6px 0 0 #c1d7ae;
+  --shadow-yellow-hover: 0 6px 0 0 #fee7a3;
+  --shadow-pink-hover: 0 6px 0 0 #f7a5a5;
+  --shadow-blue-hover: 0 6px 0 0 #5d688a;
+  --shadow-ghost-hover: 0 6px 0 0 rgba(0, 0, 0, 0.15);
+  --shadow-orange-hover: 0 6px 0 0 #fe8d53;
+  --shadow-navy-gray-hover: 0 6px 0 0 rgba(174, 179, 197, 0.7);
+
+  /* Depth Shadows */
+  --shadow-lg: 0 4px 24px rgba(0, 0, 0, 0.12);
+  --shadow-default: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Typography Utility Classes */
+
+.heading-h1-bold {
+  font-family: var(--font-author);
+  font-size: var(--h1-font-size);
+  font-weight: var(--h1-font-weight-bold);
+  letter-spacing: var(--h1-letter-spacing);
+  line-height: var(--h1-line-height);
+}
+
+.heading-h1-regular {
+  font-family: var(--font-author);
+  font-size: var(--h1-font-size);
+  font-weight: var(--h1-font-weight-regular);
+  letter-spacing: var(--h1-letter-spacing);
+  line-height: var(--h1-line-height);
+}
+
+.heading-h2-bold {
+  font-family: var(--font-author);
+  font-size: var(--h2-font-size);
+  font-weight: var(--h2-font-weight-bold);
+  letter-spacing: var(--h2-letter-spacing);
+  line-height: var(--h2-line-height);
+}
+
+.heading-h3-bold {
+  font-family: var(--font-author);
+  font-size: var(--h3-font-size);
+  font-weight: var(--h3-font-weight-bold);
+  letter-spacing: var(--h3-letter-spacing);
+  line-height: var(--h3-line-height);
+}
+
+.body-lg-regular {
+  font-family: var(--font-clash-grotesk);
+  font-size: var(--body-lg-font-size);
+  font-weight: var(--body-lg-font-weight-regular);
+  letter-spacing: var(--body-lg-letter-spacing);
+  line-height: var(--body-lg-line-height);
+}
+
+.body-regular {
+  font-family: var(--font-clash-grotesk);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight-regular);
+  letter-spacing: var(--body-letter-spacing);
+  line-height: var(--body-line-height);
+}
+
+.body-sm-regular {
+  font-family: var(--font-clash-grotesk);
+  font-size: var(--body-sm-font-size);
+  font-weight: var(--body-sm-font-weight-regular);
+  letter-spacing: var(--body-sm-letter-spacing);
+  line-height: var(--body-sm-line-height);
+}
+
+.eyebrow {
+  font-family: var(--font-pirage);
+  font-size: var(--eyebrow-font-size);
+  font-weight: var(--eyebrow-font-weight);
+  letter-spacing: var(--eyebrow-letter-spacing);
+  line-height: var(--eyebrow-line-height);
+  text-transform: var(--eyebrow-text-transform);
+}
+
+.label {
+  font-family: var(--font-pirage);
+  font-size: var(--label-font-size);
+  font-weight: var(--label-font-weight);
+  letter-spacing: var(--label-letter-spacing);
+  line-height: var(--label-line-height);
+}
+
+.footnote {
+  font-family: var(--font-clash-grotesk);
+  font-size: var(--footnote-font-size);
+  font-weight: var(--footnote-font-weight);
+  letter-spacing: var(--footnote-letter-spacing);
+  line-height: var(--footnote-line-height);
+}
