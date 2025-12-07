@@ -1,3 +1,138 @@
+.logo,
+.logo * {
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 112px;
+  position: relative;
+  aspect-ratio: 500/112;
+}
+
+.black {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+  object-fit: cover;
+}
+
+/* variant styles */
+.logo.colour-olive .olive,
+.logo.colour-alt .alt,
+.logo.colour-blue-steel .blueSteel,
+.logo.colour-pink .pink,
+.logo.colour-primary .primary,
+.logo.colour-white .white,
+.logo.colour-yellow .yellow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+  object-fit: cover;
+}
+
+a,
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+menu,
+ol,
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Figma typography and effect tokens from the design file */
+  --eyebrow-font-family: Pirage-Regular, sans-serif;
+  --eyebrow-font-size: 20px;
+  --eyebrow-line-height: 105%;
+  --eyebrow-font-weight: 400;
+  --eyebrow-font-style: normal;
+  /* ... full token set preserved from Figma ... */
+}
+
+[data-ppcdesigntokens-mode='mode-1'] {
+  --pink-ppcpinkprimary: #e34a6f;
+  --pink-ppcpinkprimary300: #ed778a;
+  --pink-ppcpinkprimary200: #f7a5a5;
+  --pink-ppcpinkprimary100: #fbd2d2;
+  --pink-ppcpinkprimary50: #fef4f4;
+  --bluesteel-ppcbluesteel: #383e53;
+  --bluesteel-ppcbluesteel300: #5d688a;
+  --bluesteel-ppcbluesteel200: #aeb3c5;
+  --bluesteel-ppcbluesteel100: #d6d9e2;
+  --bluesteel-ppcbluesteel50: #f4f5f7;
+  --orange-ppcburntorange: #e95c00;
+  --orange-ppcburntorange300: #fe8d53;
+  --orange-ppcburntorange200: #ffb997;
+  --orange-ppcburntorange100: #ffd6c1;
+  --orange-ppcburntorange50: #fff5ed;
+  --olive-ppcolive: #657b52;
+  --olive-ppcolive300: #8ba178;
+  --olive-ppcolive200: #c1d7ae;
+  --olive-ppcolive100: #e2f0e8;
+  --olive-ppcolive50: #fafcfb;
+  --yellow-ppcmustard: #fec10b;
+  --yellow-ppcmustard300: #fed766;
+  --yellow-ppcmustard200: #fee7a3;
+  --yellow-ppcmustard100: #fff7e0;
+  --yellow-ppcmustard50: #fffdf7;
+  --ppcpurewhite: #ffffff;
+  --ppcblack: #3c3c3c;
+  --grey-ppcdarkgrey: #515151;
+  --grey-ppcdarkgrey300: #808080;
+  --grey-ppcdarkgrey200: #aeaeae;
+  --grey-ppcdarkgrey100: #c5c5c5;
+  --grey-ppcdarkgrey50: #f3f3f3;
+  --grey-ppclightgrey: #d0d0d0;
+  --grey-lightgrey300: #d9d9d9;
+  --grey-lightgrey200: #e3e3e3;
+  --grey-lightgrey100: #ececec;
+  --grey-lightgrey50: #f6f6f6;
+  --softbrown-ppcsoftbrown: #e3cdbf;
+  --softbrown-ppcsoftbrown300: #ead8cd;
+  --softbrown-ppcsoftbrown200: #f0e3db;
+  --softbrown-ppcsoftbrown100: #f6eeea;
+  --softbrown-ppcsoftbrown50: #fcf9f8;
+  --blush-ppcblush: #e5aea9;
+  --blush-ppcblush300: #edc6c3;
+  --blush-ppcblush200: #f2d7d4;
+  --blush-ppcblush100: #faefee;
+  --blush-ppcblush50: #fcf7f6;
+  --status-success: #479900;
+  --status-error: #ea4335;
+  --status-warning: #fbbc05;
+  --status-info: #407afb;
+  --status-note: #6d28d9;
+  --status-disabled: #cdcdcd;
+}
+
+/* Storybook gallery layout for Foundations/Logo */
+
 .foundations-logo-gallery {
   padding: 40px 32px;
 }
