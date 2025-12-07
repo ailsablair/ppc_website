@@ -1,5 +1,6 @@
 import type { Meta } from '@storybook/react';
 import './colors.css';
+import './design-tokens.css';
 
 const meta = {
   title: 'Foundation',
