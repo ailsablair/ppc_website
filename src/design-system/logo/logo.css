@@ -1,0 +1,26 @@
+.ppc-logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 112px;
+  max-width: 100%;
+  aspect-ratio: 500 / 112;
+}
+
+.ppc-logo__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .ppc-logo {
+    height: auto;
+  }
+
+  .ppc-logo__image {
+    height: auto;
+  }
+}
