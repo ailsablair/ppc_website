@@ -1,0 +1,28 @@
+.foundations-logo-gallery {
+  padding: 40px 32px;
+}
+
+.foundations-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.foundations-logo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+}
+
+.foundations-logo-name {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3c3c3c;
+  text-align: center;
+}
