@@ -1,0 +1,22 @@
+/* Import Google Fonts and custom fonts for PipsQueak Pet Care design system */
+
+/* Clash Grotesk - Body font */
+@import url('https://fonts.googleapis.com/css2?family=Clash+Grotesk:wght@400;500;600&display=swap');
+
+/* Gabarito - Alternative heading font */
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600&display=swap');
+
+/* Caveat Brush - Playful style option */
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+
+/* 
+  Note: The following fonts are referenced in the design system but may require custom hosting:
+  - Author (serif)
+  - Pirage (sans-serif)
+  
+  If these are custom/licensed fonts, ensure they are added to your project's font assets
+  and imported in the CSS using @font-face declarations.
+  
+  For now, we use available system fonts and Google Fonts as fallbacks.
+  Update the CSS custom properties in design-tokens.css if you have custom font files.
+*/
