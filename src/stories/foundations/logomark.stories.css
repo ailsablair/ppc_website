@@ -1,0 +1,61 @@
+.logomark,
+.logomark * {
+  box-sizing: border-box;
+}
+
+.logomark {
+  width: 240px;
+  height: 204px;
+  position: relative;
+  aspect-ratio: 240 / 204;
+}
+
+.logomark-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  object-fit: cover;
+}
+
+.foundations-logomark-gallery {
+  padding: 40px 32px;
+}
+
+.foundations-logomark-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+}
+
+.foundations-logomark-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+}
+
+.foundations-logomark-name {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3c3c3c;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .foundations-logomark-gallery {
+    padding: 24px 16px;
+  }
+
+  .foundations-logomark-grid {
+    gap: 16px;
+  }
+}
