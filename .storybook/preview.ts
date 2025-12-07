@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react-vite'
+import '../src/stories/foundation/design-tokens.css'
 
 const preview: Preview = {
   parameters: {
@@ -16,6 +17,7 @@ const preview: Preview = {
       test: 'todo'
     }
   },
+  tags: ['autodocs'],
 };
 
 export default preview;
