@@ -191,3 +191,230 @@ export const Logomark = () => (
     </div>
   </div>
 );
+
+interface TypographyToken {
+  name: string;
+  fontFamily: string;
+  fontSize: string;
+  fontWeight: number;
+  letterSpacing: string;
+  lineHeight: string;
+  textTransform?: string;
+  textDecoration?: string;
+}
+
+const typographyTokens = {
+  headings: [
+    {
+      name: 'H1 - Bold',
+      fontFamily: 'Author',
+      fontSize: '72px',
+      fontWeight: 600,
+      letterSpacing: '0.25%',
+      lineHeight: '95%',
+    },
+    {
+      name: 'H1 - Regular',
+      fontFamily: 'Author',
+      fontSize: '72px',
+      fontWeight: 400,
+      letterSpacing: '0.25%',
+      lineHeight: '95%',
+    },
+    {
+      name: 'H2 - Bold',
+      fontFamily: 'Author',
+      fontSize: '64px',
+      fontWeight: 600,
+      letterSpacing: '0.25%',
+      lineHeight: '110%',
+    },
+    {
+      name: 'H3 - Bold',
+      fontFamily: 'Author',
+      fontSize: '48px',
+      fontWeight: 600,
+      letterSpacing: '0.15%',
+      lineHeight: '54px',
+    },
+  ] as TypographyToken[],
+  body: [
+    {
+      name: 'Body - Large',
+      fontFamily: 'Clash Grotesk',
+      fontSize: '24px',
+      fontWeight: 400,
+      letterSpacing: '0.75%',
+      lineHeight: '125%',
+    },
+    {
+      name: 'Body - Regular',
+      fontFamily: 'Clash Grotesk',
+      fontSize: '19px',
+      fontWeight: 400,
+      letterSpacing: '0.75%',
+      lineHeight: '120%',
+    },
+    {
+      name: 'Body - Small',
+      fontFamily: 'Clash Grotesk',
+      fontSize: '16px',
+      fontWeight: 400,
+      letterSpacing: '2.75%',
+      lineHeight: '120%',
+    },
+    {
+      name: 'Footnote',
+      fontFamily: 'Clash Grotesk',
+      fontSize: '14px',
+      fontWeight: 500,
+      letterSpacing: '2.25%',
+      lineHeight: '28px',
+    },
+  ] as TypographyToken[],
+  labels: [
+    {
+      name: 'Eyebrow',
+      fontFamily: 'Pirage',
+      fontSize: '20px',
+      fontWeight: 600,
+      letterSpacing: '2%',
+      lineHeight: '105%',
+      textTransform: 'uppercase',
+    },
+    {
+      name: 'Label',
+      fontFamily: 'Pirage',
+      fontSize: '32px',
+      fontWeight: 400,
+      letterSpacing: '2%',
+      lineHeight: '105%',
+    },
+  ] as TypographyToken[],
+};
+
+interface ShadowToken {
+  name: string;
+  value: string;
+  color: string;
+}
+
+const shadowTokens: ShadowToken[] = [
+  { name: 'Large Shadow', value: '0 4px 24px rgba(0, 0, 0, 0.12)', color: 'rgba(0, 0, 0, 0.12)' },
+  { name: 'Default Shadow', value: '0 4px 16px rgba(0, 0, 0, 0.12)', color: 'rgba(0, 0, 0, 0.12)' },
+  { name: 'Small Shadow', value: '0 4px 8px rgba(0, 0, 0, 0.12)', color: 'rgba(0, 0, 0, 0.12)' },
+  { name: 'Pink Hover', value: '0 6px 0 0 #f7a5a5', color: '#f7a5a5' },
+  { name: 'Olive Hover', value: '0 6px 0 0 #c1d7ae', color: '#c1d7ae' },
+  { name: 'Mustard Hover', value: '0 6px 0 0 #fee7a3', color: '#fee7a3' },
+  { name: 'Blue Steel Hover', value: '0 6px 0 0 #5d688a', color: '#5d688a' },
+  { name: 'Orange Hover', value: '0 6px 0 0 #fe8d53', color: '#fe8d53' },
+];
+
+const TypographyCard = ({ token }: { token: TypographyToken }) => (
+  <div style={{
+    padding: '24px',
+    backgroundColor: '#ffffff',
+    border: '1px solid #e0e0e0',
+    borderRadius: '8px',
+    marginBottom: '16px',
+  }}>
+    <p style={{
+      fontFamily: token.fontFamily,
+      fontSize: token.fontSize,
+      fontWeight: token.fontWeight,
+      letterSpacing: token.letterSpacing,
+      lineHeight: token.lineHeight,
+      textTransform: (token.textTransform as any) || 'none',
+      textDecoration: (token.textDecoration as any) || 'none',
+      margin: '0 0 16px 0',
+      color: '#3c3c3c',
+    }}>
+      {token.name}
+    </p>
+    <div style={{ fontSize: '12px', color: '#666', fontFamily: 'monospace' }}>
+      <p style={{ margin: '4px 0' }}>Font: {token.fontFamily}</p>
+      <p style={{ margin: '4px 0' }}>Size: {token.fontSize} / Weight: {token.fontWeight}</p>
+      <p style={{ margin: '4px 0' }}>Line Height: {token.lineHeight} / Letter Spacing: {token.letterSpacing}</p>
+    </div>
+  </div>
+);
+
+const ShadowCard = ({ token }: { token: ShadowToken }) => (
+  <div style={{
+    padding: '24px',
+    backgroundColor: '#ffffff',
+    border: '1px solid #e0e0e0',
+    borderRadius: '8px',
+    boxShadow: token.value,
+    marginBottom: '16px',
+  }}>
+    <h4 style={{ margin: '0 0 12px 0', fontSize: '14px', fontWeight: '600', color: '#3c3c3c' }}>
+      {token.name}
+    </h4>
+    <p style={{ fontSize: '12px', color: '#666', fontFamily: 'monospace', margin: '8px 0' }}>
+      {token.value}
+    </p>
+  </div>
+);
+
+export const Typography = () => (
+  <div className="foundation-container">
+    <h1 className="section-title">Typography</h1>
+    <p className="section-description">
+      PipsQueak Pet Care uses a carefully curated set of typefaces to create a warm, approachable, and professional visual identity.
+    </p>
+
+    <div style={{ marginBottom: '64px' }}>
+      <h2 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '24px', color: '#3c3c3c' }}>
+        Headings
+      </h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+        {typographyTokens.headings.map((token) => (
+          <TypographyCard key={token.name} token={token} />
+        ))}
+      </div>
+    </div>
+
+    <div style={{ marginBottom: '64px' }}>
+      <h2 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '24px', color: '#3c3c3c' }}>
+        Body Text
+      </h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+        {typographyTokens.body.map((token) => (
+          <TypographyCard key={token.name} token={token} />
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h2 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '24px', color: '#3c3c3c' }}>
+        Labels & Accents
+      </h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+        {typographyTokens.labels.map((token) => (
+          <TypographyCard key={token.name} token={token} />
+        ))}
+      </div>
+    </div>
+  </div>
+);
+
+export const Effects = () => (
+  <div className="foundation-container">
+    <h1 className="section-title">Effects & Shadows</h1>
+    <p className="section-description">
+      Shadows and effects are used to create depth, hierarchy, and interactive feedback throughout the design system.
+    </p>
+
+    <div>
+      <h2 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '24px', color: '#3c3c3c' }}>
+        Shadow System
+      </h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px' }}>
+        {shadowTokens.map((token) => (
+          <ShadowCard key={token.name} token={token} />
+        ))}
+      </div>
+    </div>
+  </div>
+);
