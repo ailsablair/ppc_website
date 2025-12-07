@@ -14,6 +14,7 @@ export type LogoVariant =
 export interface LogoProps {
   variant?: LogoVariant;
   className?: string;
+  ariaLabel?: string;
   'aria-label'?: string;
 }
 
@@ -28,15 +29,27 @@ const LOGO_SOURCES: Record<LogoVariant, string> = {
   yellow: 'https://cdn.builder.io/api/v1/image/assets%2F5f6a7f98f7ba445ebe46376b230c25b0%2F8899909a55e4458c832741b5c4b8de0e?format=webp&width=800',
 };
 
-export const Logo: React.FC<LogoProps> = ({ variant = 'primary', className, 'aria-label': ariaLabel }) => {
-  const src = LOGO_SOURCES[variant];
-  const label = ariaLabel ?? 'Pipsqueak Pet Care logo';
+export const Logo: React.FC<LogoProps> = (props) => {
+  const { variant = 'primary', className } = props;
+  const ariaLabelProp = props.ariaLabel ?? props['aria-label'];
 
-  const classes = ['ppc-logo', `ppc-logo--${variant}`, className].filter(Boolean).join(' ');
+  const src = LOGO_SOURCES[variant] ?? LOGO_SOURCES.primary;
+  const label = ariaLabelProp ?? 'Pipsqueak Pet Care logo';
+
+  const classes = ['ppc-logo', `ppc-logo--${variant}`, className]
+    .filter(Boolean)
+    .join(' ');
 
   return (
     <div className={classes}>
-      <img className="ppc-logo__image" src={src} alt={label} />
+      <img
+        className="ppc-logo__image"
+        src={src}
+        alt={label}
+        aria-label={ariaLabelProp}
+      />
     </div>
   );
 };
+
+export default Logo;

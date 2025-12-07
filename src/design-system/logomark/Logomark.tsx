@@ -12,6 +12,7 @@ export type LogomarkVariant =
 export interface LogomarkProps {
   variant?: LogomarkVariant;
   className?: string;
+  ariaLabel?: string;
   'aria-label'?: string;
 }
 
@@ -30,13 +31,12 @@ const LOGOMARK_SOURCES: Record<LogomarkVariant, string> = {
     'https://api.builder.io/api/v1/image/assets/TEMP/37e42124166220dd50f8780e2b3c3a3835c93a75?width=480',
 };
 
-export const Logomark: React.FC<LogomarkProps> = ({
-  variant = 'default',
-  className,
-  'aria-label': ariaLabel,
-}) => {
-  const src = LOGOMARK_SOURCES[variant];
-  const label = ariaLabel ?? 'Pipsqueak Pet Care logomark';
+export const Logomark: React.FC<LogomarkProps> = (props) => {
+  const { variant = 'default', className } = props;
+  const ariaLabelProp = props.ariaLabel ?? props['aria-label'];
+
+  const src = LOGOMARK_SOURCES[variant] ?? LOGOMARK_SOURCES.default;
+  const label = ariaLabelProp ?? 'Pipsqueak Pet Care logomark';
 
   const classes = ['ppc-logomark', `ppc-logomark--${variant}`, className]
     .filter(Boolean)
@@ -44,7 +44,14 @@ export const Logomark: React.FC<LogomarkProps> = ({
 
   return (
     <div className={classes}>
-      <img className="ppc-logomark__image" src={src} alt={label} />
+      <img
+        className="ppc-logomark__image"
+        src={src}
+        alt={label}
+        aria-label={ariaLabelProp}
+      />
     </div>
   );
 };
+
+export default Logomark;
