@@ -78,7 +78,10 @@ export const AllIcons: Story = {
       <div className="atoms-icons-grid">
         {iconTypes.map((iconType) => (
           <div key={iconType} className="atoms-icons-card">
-            <Icons type={iconType} />
+            <div className="atoms-icons-variant-row">
+              <Icons type={iconType} filled="false" />
+              <Icons type={iconType} filled="true" />
+            </div>
             <p className="atoms-icons-name">{iconType}</p>
           </div>
         ))}

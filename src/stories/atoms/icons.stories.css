@@ -19,6 +19,13 @@
   background-color: #ffffff;
 }
 
+.atoms-icons-variant-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
 .atoms-icons-name {
   margin-top: 8px;
   font-size: 12px;
