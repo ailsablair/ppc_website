@@ -10,8 +10,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "chromatic",
-    "chromatic:ci": "chromatic --ci"
+    "chromatic": "chromatic --build-script-name=build-storybook",
+    "chromatic:ci": "chromatic --ci --build-script-name=build-storybook"
   },
   "dependencies": {
     "react": "^19.2.0",
