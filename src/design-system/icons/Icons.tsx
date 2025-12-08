@@ -36,10 +36,13 @@ export type IconSize = 'lg-24-px' | 'sm-16-px' | 'default-20-px';
 
 export type IconFill = 'true' | 'false';
 
+export type IconColour = 'white' | 'black' | 'yellow';
+
 export interface IconsProps {
   type?: IconType;
   size?: IconSize;
   filled?: IconFill;
+  colour?: IconColour;
   className?: string;
   'aria-label'?: string;
 }
@@ -213,6 +216,7 @@ export const Icons: React.FC<IconsProps> = ({
   type = 'warning',
   size = 'lg-24-px',
   filled = 'false',
+  colour = 'black',
   className,
   'aria-label': ariaLabel,
 }) => {
@@ -221,6 +225,7 @@ export const Icons: React.FC<IconsProps> = ({
     `type-${type}`,
     `size-${size}`,
     `filled-${filled}`,
+    `colour-${colour}`,
     className,
   ]
     .filter(Boolean)
