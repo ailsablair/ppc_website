@@ -17,6 +17,7 @@
   height: 100%;
   display: block;
   object-fit: contain;
+  transition: filter 150ms ease-in-out;
 }
 
 /* Size variants */
@@ -33,6 +34,19 @@
 .icons.size-lg-24-px {
   width: 24px;
   height: 24px;
+}
+
+/* Colour variants */
+.icons.colour-black .vector {
+  filter: none;
+}
+
+.icons.colour-white .vector {
+  filter: brightness(0) invert(1);
+}
+
+.icons.colour-yellow .vector {
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(-10deg) contrast(1.1);
 }
 
 /* Type variants from Figma export (layout-related only) */

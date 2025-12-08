@@ -26,6 +26,31 @@
   gap: 8px;
 }
 
+.atoms-icons-variant-row-multi {
+  flex-wrap: wrap;
+}
+
+.atoms-icons-variant-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.atoms-icons-variant-pair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.atoms-icons-variant-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #777777;
+  text-transform: capitalize;
+}
+
 .atoms-icons-name {
   margin-top: 8px;
   font-size: 12px;
