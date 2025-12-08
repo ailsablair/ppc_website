@@ -1,0 +1,106 @@
+.icons,
+.icons * {
+  box-sizing: border-box;
+}
+
+.icons {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+
+/* Base glyph image */
+.icons .vector {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* Size variants */
+.icons.size-sm-16-px {
+  width: 16px;
+  height: 16px;
+}
+
+.icons.size-default-20-px {
+  width: 20px;
+  height: 20px;
+}
+
+.icons.size-lg-24-px {
+  width: 24px;
+  height: 24px;
+}
+
+/* Type variants from Figma export (layout-related only) */
+.icons.type-settings,
+.icons.type-team,
+.icons.type-profile,
+.icons.filled-false.type-locked,
+.icons.filled-false.size-default-20-px.type-warning,
+.icons.filled-false.size-sm-16-px.type-warning,
+.icons.type-two-chevrons-right {
+  overflow: hidden;
+}
+
+/* Additional positional rules from Figma (kept for future per-icon refinements) */
+.icons.type-settings .vector,
+.icons.type-team .vector,
+.icons.type-add .vector,
+.icons.type-profile .vector,
+.icons.type-time .vector,
+.icons.type-check-circle .vector,
+.icons.type-trash .vector,
+.icons.type-heart .vector,
+.icons.type-home .vector,
+.icons.filled-false.type-unlocked .vector,
+.icons.type-history .vector,
+.icons.type-warning .vector,
+.icons.type-paw .vector,
+.icons.type-plus .vector,
+.icons.type-plus-circle .vector,
+.icons.type-edit .vector,
+.icons.type-chevron-down .vector,
+.icons.type-two-chevrons-right .vector,
+.icons.type-close .vector,
+.icons.type-chevron-up .vector,
+.icons.type-sparkle .vector,
+.icons.type-right-arrow .vector,
+.icons.type-more-vert .vector,
+.icons.type-check .vector,
+.icons.type-right-arrow-long .vector,
+.icons.type-calendar .vector {
+  width: 100%;
+  height: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+
+/* Keep design tokens hook from Figma for future use */
+:root {
+  --eyebrow-font-family: Pirage-Regular, sans-serif;
+  --eyebrow-font-size: 20px;
+  --eyebrow-line-height: 105%;
+  --eyebrow-font-weight: 400;
+  --eyebrow-font-style: normal;
+
+  --olive-hover-box-shadow: 6px 6px 0px 0px rgba(193, 215, 174, 1);
+  --yellowhover-box-shadow: 6px 6px 0px 0px rgba(254, 231, 163, 1);
+  --pinkhover-box-shadow: 6px 6px 0px 0px rgba(247, 165, 165, 1);
+  --bluehover-box-shadow: 6px 6px 0px 0px rgba(93, 104, 138, 1);
+  --ghosthover-box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.15);
+  --orangehover-box-shadow: 6px 6px 0px 0px rgba(254, 141, 83, 1);
+  --lgshadow-box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.12);
+  --defaultshadow-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+  --smshadow-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.12);
+  --navy-gray-shadow-box-shadow: 6px 6px 0px 0px rgba(174, 179, 197, 0.7);
+}
+
+[data-variable-collection-mode='mode-1'] {
+  --status-success: #479900;
+}
