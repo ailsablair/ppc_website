@@ -1,12 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+
+const STORYBOOK_URL: string =
+  (import.meta.env.VITE_STORYBOOK_URL as string | undefined) ??
+  'https://ailsablair.github.io/ppc_website/';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return <div className="app-root" />
+  return (
+    <div className="ppc-storybook-shell">
+      <iframe
+        className="ppc-storybook-frame"
+        src={STORYBOOK_URL}
+        title="PipsQueak Pet Care Design System Storybook"
+        loading="lazy"
+      />
+    </div>
+  );
 }
 
-export default App
+export default App;
