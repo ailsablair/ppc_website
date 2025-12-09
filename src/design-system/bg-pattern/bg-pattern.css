@@ -1,0 +1,81 @@
+.ppc-bg-pattern {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.ppc-bg-pattern--type-website-bg {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+.ppc-bg-pattern__svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .ppc-bg-pattern__svg {
+    width: 200%;
+  }
+}
+
+.ppc-bg-pattern--type-default,
+.ppc-bg-pattern--type-paw-prints {
+  position: relative;
+  width: 100%;
+  padding-bottom: 73.6%;
+  overflow: hidden;
+}
+
+.ppc-bg-pattern__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Colour modifiers for website background pattern */
+
+.ppc-bg-pattern--type-website-bg.ppc-bg-pattern--colour-mustard {
+  color: var(--yellow-ppcmustard, #fec10b);
+}
+
+.ppc-bg-pattern--type-website-bg.ppc-bg-pattern--colour-white {
+  color: var(--ppcpurewhite, #ffffff);
+}
+
+.ppc-bg-pattern--type-website-bg.ppc-bg-pattern--colour-blue-steel-300 {
+  color: var(--bluesteel-ppcbluesteel300, #5d688a);
+}
+
+.ppc-bg-pattern--type-website-bg.ppc-bg-pattern--colour-pink-200 {
+  color: var(--pink-ppcpinkprimary200, #f7a5a5);
+}
+
+.ppc-bg-pattern--type-website-bg.ppc-bg-pattern--colour-pink {
+  color: var(--pink-ppcpinkprimary, #e34a6f);
+}
+
+.ppc-bg-pattern--type-website-bg.ppc-bg-pattern--colour-olive {
+  color: var(--olive-ppcolive200, #c1d7ae);
+}
+
+.ppc-bg-pattern--type-website-bg.ppc-bg-pattern--colour-black {
+  color: var(--ppcblack, #3c3c3c);
+}
+
+.ppc-bg-pattern--type-website-bg.ppc-bg-pattern--colour-dark-grey-300 {
+  color: var(--grey-ppcdarkgrey300, #808080);
+}
+
+.ppc-bg-pattern--type-website-bg.ppc-bg-pattern--colour-default {
+  color: var(--grey-ppcdarkgrey200, #aeaeae);
+}
