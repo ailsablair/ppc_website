@@ -76,7 +76,7 @@ You can also run Chromatic tests locally:
 # Run Chromatic test
 npm run chromatic
 
-# Run in CI mode (fails if changes are detected)
+# Run in CI mode (fails if changes are detected; this is stricter than the default GitHub Actions workflow, which is configured with exitZeroOnChanges: true)
 npm run chromatic:ci
 ```
 
@@ -96,7 +96,7 @@ The Chromatic workflow is defined in `.github/workflows/chromatic.yml` and runs:
 
 ### Key Settings
 
-- **exitZeroOnChanges: false** - Workflow doesn't fail if visual changes are detected
+- **exitZeroOnChanges: true** - CI workflow passes even when visual changes are detected; visual diffs still appear in Chromatic for review and must be accepted before merging
 - **exitOnceUploaded: false** - Waits for build to be processed on Chromatic servers
 
 You can modify these settings in the workflow file based on your team's needs.

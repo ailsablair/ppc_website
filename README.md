@@ -45,6 +45,10 @@ Chromatic automatically detects visual changes in your components, enables team 
 
 For detailed setup and usage instructions, see [CHROMATIC.md](./CHROMATIC.md).
 
+### CI behavior in GitHub Actions
+
+In `.github/workflows/chromatic.yml`, Chromatic is configured with `exitZeroOnChanges: true`, so the GitHub Actions workflow succeeds even when visual changes are detected. Visual diffs still appear in the Chromatic check and must be reviewed and accepted before merging.
+
 ### Running Tests Locally
 
 ```bash
