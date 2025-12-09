@@ -1,0 +1,52 @@
+.foundations-bg-pattern-gallery {
+  padding: 40px 32px;
+}
+
+.foundations-bg-pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.foundations-bg-pattern-grid--tiles {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.foundations-bg-pattern-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  gap: 12px;
+}
+
+.foundations-bg-pattern-swatch {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.foundations-bg-pattern-swatch--tile {
+  max-width: none;
+}
+
+.foundations-bg-pattern-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #3c3c3c;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .foundations-bg-pattern-gallery {
+    padding: 24px 16px;
+  }
+
+  .foundations-bg-pattern-grid {
+    gap: 16px;
+  }
+}
