@@ -1,0 +1,43 @@
+.ppc-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.ppc-icon__svg {
+  display: block;
+}
+
+.ppc-icon--size-sm-16px .ppc-icon__svg {
+  width: 16px;
+  height: 16px;
+}
+
+.ppc-icon--size-default-20px .ppc-icon__svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ppc-icon--size-lg-24px .ppc-icon__svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ppc-icon--colour-black {
+  color: var(--ppc_black, #3c3c3c);
+}
+
+.ppc-icon--colour-white {
+  color: var(--ppc_pure_white, #ffffff);
+}
+
+.ppc-icon--colour-yellow {
+  color: var(--yellow-ppc_mustard, #fec10b);
+}
+
+.ppc-icon--button-reset {
+  border: none;
+  padding: 0;
+  background: none;
+}
